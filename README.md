@@ -1,27 +1,95 @@
-# Shop
+# E-Commerce Web Application — Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+Bu proje, modern ve ölçeklenebilir bir **e-ticaret web uygulamasının Angular tabanlı frontend** katmanıdır. Kullanıcıların ürünleri görüntüleyebildiği, sepete ekleyebildiği ve sipariş oluşturabildiği; yöneticilerin ise ürün ve kategori yönetimi yapabildiği **tam özellikli bir e-ticaret sistemi** sunar.
 
-## Development server
+**Backend Repository:** `ECommerceSiteApi` (ASP.NET Core REST API)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### User Side
+- Kullanıcı kayıt & giriş işlemleri
+- Ürün listeleme ve kategori bazlı filtreleme
+- Ürün detay sayfası
+- Sepet yönetimi
+- Sipariş oluşturma
 
-## Build
+### Admin Panel
+- Ürün ekleme / silme / güncelleme
+- Kategori yönetimi
+- Siparişleri görüntüleme
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Core System
+- Angular Guards ile yetkilendirme
+- HTTP Interceptors ile token yönetimi
+- Modüler mimari yapı
+- RESTful API entegrasyonu
+- Responsive tasarım
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tech Stack
+- Angular 17
+- TypeScript
+- RxJS
+- Angular Router
+- RESTful API integration
+- HTML5 / CSS3
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Project Structure
 
-## Further help
+```text
+src/app
+├── category-list
+├── product-list
+├── main-layout
+├── menu
+├── modules
+├── services
+├── models
+├── guards
+├── interceptors
+├── app-routing.module.ts
+├── app.component.ts
+└── app.module.ts
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js (LTS)
+- Angular CLI
+
+### Installation
+npm install
+
+
+### Environment Configuration
+`src/environments/environment.ts`
+export const environment = {
+apiUrl: 'https://localhost:5001/api
+'
+};
+
+
+### Run (Development)
+Application runs at:
+http://localhost:4200
+
+
+### Build
+ng build
+Build çıktıları `dist/` klasörüne oluşturulur.
+
+---
+
+## API Entegrasyonu
+
+Uygulama, ASP.NET Core backend ile RESTful servisler üzerinden haberleşir.  
+Tüm ürün, kategori, kullanıcı ve sipariş işlemleri API uç noktaları üzerinden gerçekleştirilir.  
+Yetkilendirme işlemleri route guard’lar ve HTTP interceptor’lar ile yönetilir.
